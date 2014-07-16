@@ -6,7 +6,10 @@
 
     <% if index != @result.teams.size - 1 %>
       <br/>
-      <%= select "result[teams][#{index}]", :relation, ["defeats", "ties"], {} %>
+      <%= f.hidden_field :relation, value: "defeats", :class => "input-mini" %>
+      <!-- <%= select "result[teams][#{index}]", :relation, ["defeats", "ties"], {} %> -->
+      Defeats:
+      <br/>
     <% end %>
   <% end %>
 
