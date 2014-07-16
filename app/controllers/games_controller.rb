@@ -20,10 +20,10 @@ class GamesController < ApplicationController
   end
 
   def new
-    @game = Game.new min_number_of_players_per_team: 1,
-                     rating_type: "trueskill",
-                     min_number_of_teams: 2,
-                     allow_ties: true
+    @game = Game.new max_number_of_players_per_team: 1,
+                     rating_type: "elo",
+                     max_number_of_teams: 2,
+                     allow_ties: false
   end
 
   def show
